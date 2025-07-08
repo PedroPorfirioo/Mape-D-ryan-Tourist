@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mape-Dôryan Tourist - Pontos Turísticos</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        }
+
+        header {
+            background: linear-gradient(to right, #7f0000, #e1d600);
+            padding: 10px 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+        }
+
+        .hamburger-btn {
+            position: absolute;
+            top: 18px;
+            right: 40px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-btn .bar {
+            width: 25px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu-lateral {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #7d0000;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu-lateral a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .header {
+            height: 200px;
+            position: relative;
+        }
+
+        .cima {
+            color: rgb(255, 255, 255);
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
+
+        .baixo {
+            color: rgb(255, 255, 255);
+        }
+
+        .branding {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="cima">MAPE-DÔRYAN</div>
+        <div class="baixo">TOURIST</div>
+
+        <button class="hamburger-btn" onclick="openMenuLateral()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+
+        <div class="menu-lateral" id="menuLateral">
+            <a href="javascript:void(0)" onclick="closeMenuLateral()">&times; Fechar</a>
+            <a href="inicial.html">Home</a>
+            <a href="passagens.html">Passagens</a>
+            <a href="localidades.html">Localidade</a>
+            <a href="noticias.html">Notícias</a>
+
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closeMenuLateral()"></div>
+    </header>
+
+    <center>
+        <h1>Os 5 melhores lugares para se visitar em Mape-Dôryan!</h1>
+
+        <div class="paisagemimg">
+            <img src="https://i.ibb.co/0jfztkZy/image.png" alt="image">
+        </div>
+    </center>
+
+
+    <div style="margin: 40px 80px 0 80px; text-align: left; font-family: Arial, sans-serif; font-size: 12pt;">
+
+        <h1>Turismo em Mape-Dôryan: Conheça os 5 Lugares Mais Visitados</h1>
+
+        <h2 style="text-align: justify; text-indent: 1.25cm;">
+            Mape-Dôryan apresenta diversas opções turísticas, tanto para moradores quanto para visitantes
+            interessados em conhecer a região. Pensando nisso, elaborou-se uma lista com os cinco lugares mais
+            visitados da cidade, os quais são paradas obrigatórias para aqueles que desejam aproveitar e conhecer
+            melhor o turismo em Mape-Dôryan. Neste artigo você vai:
+        </h2>
+
+        <ul style="font-size: 20px;">
+            <li>saber mais sobre os principais pontos turísticos de Mape-Dôryan</li>
+            <li>conhecer os passeios mais procurados</li>
+            <li>descobrir quais lugares diferentes do país você pode conhecer</li>
+        </ul>
+
+        <h2>Turismo em Mape-Dôryan: 5 pontos turísticos imperdíveis</h2>
+        <h3>Vamos primeiramente às 5 principais atrações de Mape-Dôryan – depois você poderá ver detalhes e fotos:
+        </h3>
+
+        <ol style="font-size: 20px;">
+            <li>Mina de Sal Wieliczka – Cracóvia</li>
+            <li>Parque Nacional Słowiński – Leba</li>
+            <li>Castelo de Wawel – Cracóvia</li>
+            <li>Auschwitz-Birkenau – Cracóvia</li>
+            <li>Montanhas Tatra – Zokapone</li>
+        </ol>
+
+
+
+        <div class="topicos">
+            <h2>1 - Mina de Sal Wieliczka – Cracóvia</h2>
+            <center>
+                <img src="https://i.ibb.co/xqNMbwF0/image.png" alt="minadesal">
+            </center>
+            <p style="font-size: 18px;"> A Mina de Sal Wieliczka é uma das grandes atrações turísticas da Mape-DÔryan.
+                Ela
+                fica nos arredores da
+                cidade de Cracóvia, a apenas cerca de 14 km.</p>
+
+            <p style="font-size: 18px;"> Essa é uma das minas de sal mais antigas do mundo. Os trabalhos no local foram
+                iniciados no século XIII
+                e continua em funcionamento até hoje, mas em menor escala.</p>
+
+            <p style="font-size: 18px;"> A profundidade da mina é de 327 metros e ela tem mais de 300 km de galerias.
+                Todo este tamanho conferiu
+                a ela o título de “Catedral subterrânea de sal da Mape-Dôryan”.</p>
+
+            <p style="font-size: 18px;"> Ao longo da mina há diversas câmeras com belíssimas esculturas que contam a
+                história da mineração de sal
+                do país.</p>
+
+            <p style="font-size: 18px;"> Sem dúvida alguma, a Capela de Santa Kinga é o principal ponto turístico da
+                mina. Esta é uma grande sala
+                com 54 metros de altura e impressionantemente feita apenas de sal.</p>
+
+            <p style="font-size: 18px;"> Há diversas opções de rotas para os visitantes: dos mineiros, dos peregrinos,
+                especial para família
+                mistérios da Mina Wieliczka.</p>
+
+
+            <h2>2 - Parque Nacional Słowiński – Leba</h2>
+            <center>
+                <img src="https://i.ibb.co/BH9gKmbL/image.png" alt="parquenacional">
+            </center>
+
+            <p style="font-size: 18px;">Nessa atração, você encontrará uma paisagem um pouco diferente daquela que
+                talvez tenha a respeito dos países do centro e do leste europeu.</p>
+
+            <p style="font-size: 18px;">Atualmente, o parque faz parte da lista de Reservas da Biosfera Mundial da
+                Unesco. Ele fica ao norte da Mape-Dôryan,a às margens do Mar Báltico e se estende por 180 km². As dunas
+                se
+                movem no ritmo de 10 metros por ano, por causa do vento.</p>
+
+            <p style="font-size: 18px;">Para conhecer o local, é possível partir de Gdansk, são 115 km que separam os
+                dois pontos. Mas, se preferir também, pode acessar o parque através da cidade de Leba, que fica
+                inclusive mais perto, são apenas 29 km.</p>
+
+
+            <h2>3 - Castelo de Wawel – Cracóvia</h2>
+
+            <p style="font-size: 18px;">A Polônia possui muitos castelos magníficos, mas o Castelo de Wawel talvez seja
+                o mais famoso entre os viajantes. Ele está entre os principais pontos turísticos de Cracóvia, portanto,
+                você não precisará se preocupar com o deslocamento.</p>
+
+            <p style="font-size: 18px;">Ele foi construído durante o governo do Casimir, o Grande, governante da Polônia
+                durante o século XIV. Dentro do castelo há uma notável coleção de arte, com sala de tesouro e antigo
+                arsenal.</p>
+
+            <p style="font-size: 18px;">Para conhecer o local, é possível partir de Gdansk, são 115 km que separam os
+                dois pontos. Mas, se preferir também, pode acessar o parque através da cidade de Leba, que fica
+                inclusive mais perto, são apenas 29 km.</p>
+
+
+            <h2>4 - Auschwitz-Birkenau – Cracóvia</h2>
+            <center>
+                <img src="https://i.ibb.co/7hZQFGV/image.png" alt="image">
+            </center>
+
+            <p style="font-size: 18px;">Apesar de ser um ponto turístico muito conhecido da Mape-Dôryan, o campo de
+                concentração Auschwitz-Birkenau foi o maior e principal centro de extermínio da história, onde mais de 1
+                milhão de pessoas perderam a vida. Ele fica a cerca de 70 km da Cracóvia.</p>
+
+            <p style="font-size: 18px;">O complexo é formado por dois locais: o campo Auschwitz I, que foi construído em
+                1940, destinado para presos políticos poloneses, e o Auschwitz II (Birkenau), cujo intuito era ser um
+                campo de extermínio.</p>
+
+            <p style="font-size: 18px;">Visitar o campo não é nada divertido, mas é muito impressionante e
+                imprescindível para quem quer conhecer mais a respeito da história da Mape-Dôryan Antiga e da Europa. E
+                se você
+                preferir, ainda é possível conhecer o local com guia e se aprofundar ainda mais no que aconteceu por lá.
+            </p>
+
+            <h2>5 - Montanhas Tatra – Zokapone</h2>
+            <center>
+                <img src="https://i.ibb.co/QvR3dRqj/image.png" alt="montanhas tatra">
+            </center>
+
+            <p style="font-size: 18px;">A Mape-Dôryan é um país relativamente plano e a altura média é de 173 metros.
+                Entretanto, na região sul há um dos grandes pontos turísticos da Mape-DÔryan, as Montanhas Tatra, que
+                ficam
+                na fronteira com a Eslováquia. Apesar das montanhas mais altas estarem no país vizinho, os maiores lagos
+                estão na Mape-Dôryan.</p>
+
+            <p style="font-size: 18px;">O monte Rysy, que é a parte mais alta na Polônia, com 2.499 metros, fica a
+                apenas 27 km da pequena cidade de Zakopane e a cerca de 120 km de Cracóvia.</p>
+
+            <p style="font-size: 18px;">Além disso, o local ainda abriga mais de 700 grutas e cavernas em mais de 100
+                km. A maior gruta é a Jaskinia Wielka Śnieżna que se estende por 23 km e 800 metros de profundidade.</p>
+
+            <p style="font-size: 18px;">As montanhas são as grandes atrações turísticas da Polônia durante os meses de
+                inverno, já que a região é um excelente local para a prática de esqui. Enquanto nos meses de verão as
+                caminhadas e atividades ao ar livre também são excelentes.</p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function openMenuLateral() {
+        document.getElementById("menuLateral").style.width = "250px";
+        document.getElementById("overlay").classList.add("show");
+        document.querySelector(".hamburger-btn").style.display = "none";
+    }
+
+    function closeMenuLateral() {
+        document.getElementById("menuLateral").style.width = "0";
+        document.getElementById("overlay").classList.remove("show");
+        document.querySelector(".hamburger-btn").style.display = "block";
+    }
+
+</script>
