@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mape-Dôryan Tourist - Localidade</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+        }
+
+        header {
+            background: linear-gradient(to right, #7f0000, #e1d600);
+            padding: 10px 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+        }
+
+        .hamburger-btn {
+            position: absolute;
+            top: 18px;
+            right: 40px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-btn .bar {
+            width: 25px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu-lateral {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #7d0000;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu-lateral a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .header {
+            height: 200px;
+            position: relative;
+        }
+
+        .cima {
+            color: rgb(255, 255, 255);
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
+
+        .baixo {
+            color: rgb(255, 255, 255);
+        }
+
+        .branding {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .principal {
+            max-width: 1400px;
+            margin: 60px auto;
+            display: flex;
+            gap: 50px;
+        }
+
+        .principal img {
+            width: 50%;
+            border-radius: 15px;
+            max-height: 500px;
+        }
+
+        .texto {
+            width: 50%;
+            text-align: justify;
+            font-size: 1.3rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cima">MAPE-DÔRYAN</div>
+        <div class="baixo">TOURIST</div>
+
+        <button class="hamburger-btn" onclick="openMenuLateral()" aria-label="Abrir menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <nav class="menu-lateral" id="menuLateral" aria-hidden="true">
+            <a href="javascript:void(0)" onclick="closeMenuLateral()" aria-label="Fechar menu">&times; Fechar</a>
+            <a href="inicial.html">Início</a>
+            <a href="pontoturistico.html">Pontos Turísticos</a>
+            <a href="passagens.html">Passagens</a>
+            <a href="localidades.html">Localidades</a>
+            <a href="noticias.html">Notícias</a>
+        </nav>
+        <div class="overlay" id="overlay" onclick="closeMenuLateral()" tabindex="-1"></div>
+    </header>
+
+    <h1>Geografia e Ambiente de Mape-Dôryan</h1>
+
+    <div class="principal">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+            alt="Paisagem utópica com montanhas e florestas" />
+
+        <div class="texto">
+            <p>
+                Em Utopía Celeste, a geografia é uma obra-prima da harmonia natural. Montanhas cristalinas cercam vastas
+                florestas bioluminescentes que iluminam as noites com um brilho suave e mágico. Rios serpenteiam por
+                vales exuberantes, suas águas puras cantando canções ancestrais.
+            </p>
+
+            <p>
+                A natureza aqui não é apenas preservada — ela é celebrada. Jardins suspensos flutuam sobre cidades
+                construídas em perfeita integração com o ambiente, e os habitantes vivem em total respeito aos ciclos
+                naturais. A biodiversidade é protegida por tecnologias ecológicas que promovem o equilíbrio perfeito
+                entre o homem e o planeta.
+            </p>
+
+            <p>
+                A atmosfera de Utopía Celeste é fresca, limpa e rica em energias positivas, com ar puro filtrado por
+                florestas densas e montanhas que atuam como gigantescos pulmões do mundo. O céu é adornado por duas
+                luas brilhantes que regulam o tempo e as marés, conferindo um toque de magia e mistério.
+            </p>
+
+            <p>
+                Em cada canto da nação, é possível sentir a conexão profunda entre o ser humano e a Terra, criando uma
+                realidade onde o progresso caminha lado a lado com a preservação ambiental.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openMenuLateral() {
+            document.getElementById("menuLateral").style.width = "300px";
+            document.getElementById("overlay").classList.add("show");
+            document.querySelector(".hamburger-btn").style.display = "none";
+            document.getElementById("menuLateral").setAttribute("aria-hidden", "false");
+        }
+
+        function closeMenuLateral() {
+            document.getElementById("menuLateral").style.width = "0";
+            document.getElementById("overlay").classList.remove("show");
+            document.querySelector(".hamburger-btn").style.display = "block";
+            document.getElementById("menuLateral").setAttribute("aria-hidden", "true");
+        }
+    </script>
+</body>
+
+</html>
