@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mape-Dôryan Tourist - Pontos Turísticos</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(to right, #7f0000, #e1d600);
+            padding: 10px 20px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 14px;
+            letter-spacing: 0.15em;
+        }
+
+        .hamburger-btn {
+            position: absolute;
+            top: 18px;
+            right: 40px;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hamburger-btn .bar {
+            width: 25px;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        .menu-lateral {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #7d0000;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .menu-lateral a {
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: none;
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .header {
+            height: 200px;
+            position: relative;
+        }
+
+        .cima {
+            color: rgb(255, 255, 255);
+            padding-bottom: 2px;
+            margin-bottom: 4px;
+        }
+
+        .baixo {
+            color: rgb(255, 255, 255);
+        }
+
+        .branding {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .conteudo {
+            margin: 40px 80px;
+        }
+
+        .intro {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .intro img {
+            width: 40%;
+            border-radius: 8px;
+        }
+
+        .intro-text {
+            flex: 1;
+            font-size: 14pt;
+            text-align: justify;
+            text-indent: 1.25cm;
+        }
+
+        .atracoes {
+            margin-top: 50px;
+        }
+
+        .atracoes ul {
+            font-size: 13pt;
+            line-height: 1.6;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="cima">MAPE-DÔRYAN</div>
+        <div class="baixo">TOURIST</div>
+
+        <button class="hamburger-btn" onclick="openMenuLateral()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <div class="menu-lateral" id="menuLateral">
+            <a href="javascript:void(0)" onclick="closeMenuLateral()">&times; Fechar</a>
+            <a href="inicial.html">Início</a>
+            <a href="pontoturistico.html">Pontos Turísticos</a>
+            <a href="passagens.html">Passagens</a>
+            <a href="#">Localidades</a>
+            <a href="noticias.html">Notícias</a>
+        </div>
+
+        <div class="overlay" id="overlay" onclick="closeMenuLateral()"></div>
+    </header>
+
+    <div class="conteudo">
+        <center>
+            <h1>Descubra o Coração de Mape-Dôryan!</h1>
+        </center>
+
+        <div class="intro"
+            style="display: flex; align-items: flex-start; gap: 30px; margin: 40px 80px; font-family: Arial, sans-serif;">
+            <img src="https://i.ibb.co/0jfztkZy/image.png" alt="Paisagem de Mape-Dôryan"
+                style="width: 40%; border-radius: 8px;">
+            <div class="intro-text"
+                style="flex: 1; font-size: 18pt; line-height: 1.8; text-align: justify; text-indent: 1.25cm;">
+                <p>
+                    Mape-Dôryan é um destino singular, marcado por uma combinação harmoniosa entre natureza exuberante,
+                    cultura vibrante e hospitalidade acolhedora. Localizado em uma região de beleza cênica
+                    impressionante,
+                    o país encanta turistas com seus lagos cristalinos, montanhas serenas e florestas preservadas,
+                    ideais
+                    para atividades ao ar livre como trilhas, passeios de barco e piqueniques familiares.
+                </p>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; gap: 40px; margin-top: 50px; flex-wrap: wrap;">
+            <div class="atracoes" style="flex: 1;">
+                <h2>Principais <a href="pontoturistico.html">Pontos Turísticos:</a></h2>
+                <ul style="font-size: 20px;">
+                    <li>Mina de Sal Wieliczka</li>
+                    <li>Parque Nacional Słowiński</li>
+                    <li>Castelo de Wawel</li>
+                    <li>Auschwitz-Birkenau</li>
+                    <li>Montanhas Tatra</li>
+                </ul>
+            </div>
+
+            <div class="atracoes" style="flex: 1;">
+                <h2>Principais <a href="noticias.html">Notícias</a> Sobre Nosso País:</h2>
+                <ul style="font-size: 20px;">
+                    <li>Inauguração de nova escola: uma abertura emocionante na capital de Mape-Dôryan.</li>
+                    <li>Dia da Independência: Mape-Dôryenses fazem passeata em homenagem ao país.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script>
+            function openMenuLateral() {
+                document.getElementById("menuLateral").style.width = "250px";
+                document.getElementById("overlay").classList.add("show");
+                document.querySelector(".hamburger-btn").style.display = "none";
+            }
+
+            function closeMenuLateral() {
+                document.getElementById("menuLateral").style.width = "0";
+                document.getElementById("overlay").classList.remove("show");
+                document.querySelector(".hamburger-btn").style.display = "block";
+            }
+        </script>
+
+</body>
+
+</html>
